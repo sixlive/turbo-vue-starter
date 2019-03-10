@@ -8,6 +8,11 @@
 
 <script>
 export default {
-  props: ['action', 'method', 'token'],
+  props: ['action', 'method'],
+  computed: {
+    token() {
+      return this.$store.csrf
+    },
+  },
 }
 </script>

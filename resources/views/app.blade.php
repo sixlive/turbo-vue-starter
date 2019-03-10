@@ -12,6 +12,6 @@
   </head>
   <body>
     <div id="progress-bar" data-turbolinks-permanent></div>
-    <div id="app" data-component="{{ $name }}" data-props="{{ json_encode($data) }}"></div>
+    <div id="app" data-component="{{ $name }}" data-props="{{ json_encode($data) }}" data-store="{{ json_encode($store) }}"></div>
   </body>
 </html>

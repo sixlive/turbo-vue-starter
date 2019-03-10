@@ -9,5 +9,9 @@
 <script>
 export default {
   props: ['welcomeMessage'],
+  mounted() {
+    console.log('Store:', this.$store)
+    console.log('Props:', this.$props)
+  },
 }
 </script>

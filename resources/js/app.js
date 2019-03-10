@@ -23,6 +23,7 @@ files.keys().map(key =>
   )
 )
 
+// Ziggy configuration
 Vue.mixin({
   methods: {
     route: route,
@@ -31,6 +32,7 @@ Vue.mixin({
 
 Vue.prototype.$route = route
 
+// Progressbar
 let progressBar
 
 document.addEventListener('turbolinks:request-start', () => {
@@ -53,6 +55,9 @@ document.addEventListener('turbolinks:load', () => {
   if (window.vue) {
     window.vue.$destroy(true)
   }
+
+  // Global store
+  Vue.prototype.$store = JSON.parse(root.dataset.store)
 
   window.vue = new Vue({
     render: h =>

@@ -15,10 +15,11 @@ class ViewServiceProvider extends ServiceProvider
                 'app',
                 [
                     'name' => $name,
-                    'data' => array_merge($data, [
+                    'store' => [
                         'user' => auth()->user(),
                         'csrf' => csrf_token(),
-                    ]),
+                    ],
+                    'data' => $data,
                 ]
             );
         });
