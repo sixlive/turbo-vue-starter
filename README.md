@@ -21,7 +21,7 @@ Start your exploration by reviewing:
 ```js
 <template>
   <Layout title="Create a post">
-    <app-form action="posts.store" :token="csrf">
+    <app-form action="posts.store">
         <label>
             Post
             <textarea name="post_content"></message>
@@ -31,8 +31,6 @@ Start your exploration by reviewing:
 </template>
 
 <script>
-    export default {
-        props: ['csrf']
-    }
+    export default {}
 </script>
 ```
