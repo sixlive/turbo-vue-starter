@@ -33,12 +33,14 @@ Vue.mixin({
 Vue.prototype.$route = route
 
 // Progressbar
-let progressBar
+let progressBar = undefined
 
 document.addEventListener('turbolinks:request-start', () => {
-  progressBar = new nanobar({
-    target: document.getElementById('progress-bar'),
-  })
+  if (progressBar === undefined) {
+    progressBar = new nanobar({ 
+      target: document.getElementById('progress-bar'),
+    })
+  }
 })
 
 document.addEventListener('turbolinks:request-end', () => {
